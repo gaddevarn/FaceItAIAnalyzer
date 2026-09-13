@@ -28,8 +28,15 @@ npm start          # запуск собранного приложения
 Проверки:
 
 ```bash
-npm run lint       # ESLint
+npm run lint          # ESLint
+npm run typecheck     # TypeScript (tsc --noEmit)
+npm run format        # отформатировать всё Prettier-ом
+npm run format:check  # проверить форматирование
 ```
+
+При коммите husky + lint-staged автоматически проверяют стейдженные файлы
+(ESLint + Prettier); хуки устанавливаются при `npm install`. CI на GitHub
+Actions прогоняет lint + typecheck + build для каждого PR.
 
 ## Структура
 

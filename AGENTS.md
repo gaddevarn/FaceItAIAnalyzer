@@ -21,11 +21,17 @@ analysis for the user. Early stage — scaffold only.
 - `npm run build` — production build (also typechecks)
 - `npm start` — serve production build
 - `npm run lint` — ESLint (flat config)
+- `npm run typecheck` — `tsc --noEmit`
+- `npm run format` / `npm run format:check` — Prettier (write / check)
+
+Pre-commit hook (husky + lint-staged) auto-runs `eslint --fix` + Prettier on
+staged files and blocks the commit on remaining errors. CI (GitHub Actions)
+runs lint + typecheck + build on PRs to `main`/`dev`.
 
 ## Stack
 
 Next.js 16 (App Router, no `src/`), React 19, TypeScript, CSS Modules,
-ESLint 9, npm. Import alias `@/*`.
+ESLint 9 + Prettier, husky + lint-staged pre-commit, npm. Import alias `@/*`.
 
 ## Secrets
 
@@ -34,5 +40,6 @@ never commit it, copy it into other files, or log its contents.
 
 ## Maintenance
 
-When more tooling lands (tests, CI, env handling), record exact commands,
-required order, and conventions here.
+Landed: Prettier, husky + lint-staged, CI (`.github/workflows/ci.yml`),
+branch protection on `main`/`dev`. Still missing: tests, env handling —
+record exact commands and conventions here as they land.
