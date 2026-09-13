@@ -1,33 +1,42 @@
 # FaceItAIAnalyzer
-Analyze your FaceIt matches using an AI agent to improve your CS skills.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Приложение для анализа статистики матчей CS2 с FACEIT: получает данные игроков
+через FACEIT API и помогает анализировать их с помощью ИИ-агента.
 
-## Getting Started
+## Стек
 
-First, run the development server:
+- Next.js 16 (App Router) + React 19
+- TypeScript
+- Tailwind CSS v4
+- ESLint 9
+
+## Запуск
+
+Требуется Node.js 20+ и npm.
 
 ```bash
-npm run dev
-# or
-npm run build && npm start
+npm install        # установить зависимости
+npm run dev        # дев-сервер на http://localhost:3000 (Turbopack)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Продакшен-сборка:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build      # сборка + проверка типов
+npm start          # запуск собранного приложения
+```
 
-## Learn More
+Проверки:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint       # ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Структура
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/` — страницы и layout (App Router)
+- `public/` — статические файлы
 
-## Deploy on Vercel
+## Разработка в команде
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Процесс работы (ветки, PR, ревью, релизы) — в [CONTRIBUTING.md](CONTRIBUTING.md).
