@@ -24,7 +24,7 @@ analysis for the user. Early stage — scaffold only.
 
 ## Stack
 
-Next.js 16 (App Router, no `src/`), React 19, TypeScript, Tailwind CSS v4,
+Next.js 16 (App Router, no `src/`), React 19, TypeScript, CSS Modules,
 ESLint 9, npm. Import alias `@/*`.
 
 ## Secrets
